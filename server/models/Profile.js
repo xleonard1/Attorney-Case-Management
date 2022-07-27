@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const identificationSchema = require('./Identificaiton')
+const identificationSchema = require('./Client')
 const bcrypt = require('bcrypt');
 
 const profileSchema = new Schema ({

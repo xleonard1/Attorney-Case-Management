@@ -66,7 +66,7 @@ const identificationSchema = new Schema ({
         required: true,
     },
     eyes: {
-        type: true,
+        type: String,
         required: true,
     },
     build: {
@@ -78,7 +78,7 @@ const identificationSchema = new Schema ({
         required: true,
     },
     SSN: {
-        type: String,
+        type: Number,
         required: true,
     },
     address: {
@@ -97,4 +97,5 @@ const identificationSchema = new Schema ({
     emergencyInfo: [emergencySchema]
 })
 
-module.exports = identificationSchema
+const Client = model('Client', identificationSchema); 
+module.exports = Client;

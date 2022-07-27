@@ -49,6 +49,8 @@ type Auth {
 type Query {
     profiles: [Profile]!
     profile(profileId: ID!): Profile
+    clients: [Client]!
+    client(clientId: ID!): Client
   }
 
   type Mutation {

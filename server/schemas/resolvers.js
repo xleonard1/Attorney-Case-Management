@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Profile } = require('../models');
+const { Client } = require('../models')
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -8,9 +9,16 @@ const resolvers = {
             return Profile.find();
           },
       
-          profile: async (parent, { profileId }) => {
+        profile: async (parent, { profileId }) => {
             return Profile.findOne({ _id: profileId });
           },
+        
+        clients: async () => {
+            return Client.find();
+        },
+        client: async () => {
+            return Client.findOne({_id: clientId})
+        }
     }, 
     Mutation: {
         addProfile: async (parent, { name, badgeNumber, email, password }) => {
@@ -58,6 +66,9 @@ const resolvers = {
             { new: true }
           );
         },
+        createClient: async (parent, args) => {
+            return Client.create(args)
+        }
       },
 }
 
