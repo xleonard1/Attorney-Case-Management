@@ -16,7 +16,7 @@ const resolvers = {
         clients: async () => {
             return Client.find();
         },
-        client: async () => {
+        client: async (parent, {clientId}) => {
             return Client.findOne({_id: clientId})
         }
     }, 
