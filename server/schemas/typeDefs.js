@@ -11,6 +11,35 @@ type Profile {
     clients: [String]!
 }
 
+type Client {
+    _id: ID!
+    name: String!
+    PID: Number!
+    SID: Number!
+    aliasName: String
+    FBI: Number!
+    image: String!
+    race: String!
+    sex: String!
+    ethnicity: String!
+    dob: Date!
+    age: Number!
+    DL: Number!
+    height: String!
+    weight: Number!
+    hair: String!
+    eyes: String!
+    build: String!
+    complexion: String!
+    SSN: Number!
+    address: String!
+    phone: String!
+    placeofbirth: String!
+    arrests:[String]!
+    emergencyInfo: [String]!
+
+}
+
 # Set up an Auth type to handle returning data from a profile creating or user login
 type Auth {
   token: ID!
