@@ -15,7 +15,7 @@ const identificationSchema = new Schema ({
         required: true,
         default: 0,
     },
-    AliasName: {
+    aliasName: {
         type: String,
     },
     FBI: {
@@ -23,24 +23,72 @@ const identificationSchema = new Schema ({
         required: true,
         default: 0,
     },
-    Image: {
+    image: {
         type: String,
         requried: true,
     },
-    Race: {
+    race: {
         type: String,
         required: true,
     },
-    Sex: {
+    sex: {
         type: String,
         required: true,
     },
-    Ethnicity: {
+    ethnicity: {
         type: String,
         required: true,
     },
-    DateOfBirth: {
+    dob: {
         type: Date,
         required: true,
+    },
+    age: {
+        type: Number,
+        required: true,
+    },
+    DL: {
+        type: Number,
+        required: true,
+    },
+    height: {
+        type: String,
+        required: true,
+    },
+    weight: {
+        type: Number,
+        required: true,
+    },
+    hair: {
+        type: String,
+        required: true,
+    },
+    eyes: {
+        type: true,
+        required: true,
+    },
+    build: {
+        type: String,
+        required: true,
+    },
+    complexion: {
+        type: String,
+        required: true,
+    },
+    SSN: {
+        type: String,
+        required: true,
+    },
+    address: {
+        type: String,
+        required: true,
+    },
+    phone: {
+        type: String,
+        required: true,
+    },
+    placeofbirth: {
+        type: String,
+        required: true
     }
 })
