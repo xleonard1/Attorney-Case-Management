@@ -1,4 +1,6 @@
 const {Schema, model} = require('mongoose');
+const arrestSchema = require('./Arrest')
+const emergencySchema = require('./EMER')
 
 const identificationSchema = new Schema ({
     name: {
@@ -90,5 +92,9 @@ const identificationSchema = new Schema ({
     placeofbirth: {
         type: String,
         required: true
-    }
+    },
+    arrests: [arrestSchema],
+    emergencyInfo: [emergencySchema]
 })
+
+module.exports = identificationSchema
