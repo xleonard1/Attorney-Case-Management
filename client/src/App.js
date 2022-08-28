@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-// import Home from './pages/Homes'
+import Home from './pages/Home'
 import Navigation from './components/Nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -32,10 +32,10 @@ function App() {
         <div>
             <Navigation />
             <Routes>
-              {/* <Route
+              <Route
                 path ="/"
                 element={<Home />}
-                /> */}
+                />
             </Routes>
         </div>
       </Router>
