@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@a
 import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home'
 import Navigation from './components/Nav'
+import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const httpLink = createHttpLink({
@@ -37,6 +38,7 @@ function App() {
                 element={<Home />}
                 />
             </Routes>
+          <Footer />
         </div>
       </Router>
 

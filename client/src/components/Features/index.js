@@ -1,4 +1,5 @@
 import React from 'react'
+import ListGroup from 'react-bootstrap/ListGroup';
 
 const styles = {
    cardStyles: {
@@ -9,31 +10,29 @@ const styles = {
    listItems: {
      display: 'flex',
      flexDirection: 'row',
-     textAlight: 'center'
+     textAlight: 'center',
+     overflow: 'hidden'
    },
    iconStyle: {
-     height: '60px',
-     width: '60px'
-    
+    textAlign: 'center'
    }
 }
 
 export default function Features(props) {
   return (
-
-    <ul className="list-group"  style={styles.listItems}>
+    <ListGroup style={styles.listItems}>
       {props.appItems.map(item => (
-        <li className="list-group-item" key={item.id} style={styles.cardStyles} >
+        <ListGroup.Item  key={item.id} style={styles.cardStyles} >
           <div className='icons'>
-           <h1>{item.icon}</h1>
+           <h1 style={styles.iconStyle}>{item.icon}</h1>
           </div>
           <div>
-          <h5>{item.name}</h5>
+          <h5 style={styles.iconStyle}>{item.name}</h5>
          </div>
-        </li>
+        </ListGroup.Item>
       ))}
       
-    </ul>
+      </ListGroup>
   );
 }
 
