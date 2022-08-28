@@ -1,29 +1,39 @@
 import React from 'react'
 
-import Card from 'react-bootstrap/Card';
-
 const styles = {
    cardStyles: {
+     borderStyle: 'none',
+     marginLeft: '55px',
+     
+   },
+   listItems: {
      display: 'flex',
      flexDirection: 'row',
-     justifyContent: 'space-between'
+     textAlight: 'center'
+   },
+   iconStyle: {
+     height: '60px',
+     width: '60px'
+    
    }
 }
 
 export default function Features(props) {
   return (
 
-    <div className = 'Features' style={styles.cardStyles}>
+    <ul className="list-group"  style={styles.listItems}>
       {props.appItems.map(item => (
-        <Card style={{ width: '18rem' }}>
-        <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">{item.name}</Card.Subtitle>
-       </Card.Body>
-       </Card>
+        <li className="list-group-item" key={item.id} style={styles.cardStyles} >
+          <div className='icons'>
+           <h1>{item.icon}</h1>
+          </div>
+          <div>
+          <h5>{item.name}</h5>
+         </div>
+        </li>
       ))}
       
-    </div>
+    </ul>
   );
 }
 

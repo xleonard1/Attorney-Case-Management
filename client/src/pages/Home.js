@@ -1,27 +1,33 @@
 import React from 'react';
 import JumboTron from '../components/Jumbotron/index'
 import Card from '../components/Features/index'
+import {BsFillFileEarmarkTextFill, BsFillPenFill, BsFillFilePersonFill, BsFillWalletFill, BsBookHalf } from "react-icons/bs";
 
 const appItems = [
  {
    id: 1,
    name: "Client Intake Forms",
+   icon: <BsFillFileEarmarkTextFill />
  },
  {
    id: 2,
-   name: "eSignature"
+   name: "eSignature",
+   icon: <BsFillPenFill /> 
  },
  {
    id: 3.,
-   name: "Document Management"
+   name: "Document Management",
+   icon: <BsBookHalf />
  },
  {
    id: 4,
-   name: "Client Portal"
+   name: "Client Portal",
+   icon: <BsFillFilePersonFill />
  },
  {
    id: 5,
-   name: "Billing and Invoicing"
+   name: "Billing and Invoicing",
+   icon: <BsFillWalletFill  />
  }
 ]
 
