@@ -1,6 +1,7 @@
 import React from 'react';
 import JumboTron from '../components/Jumbotron/index'
-import Card from '../components/Features/index'
+import Features from '../components/Features/index'
+import Highlights from '../components/Highlights'
 import {BsFillFileEarmarkTextFill, BsFillPenFill, BsFillFilePersonFill, BsFillWalletFill, BsBookHalf } from "react-icons/bs";
 
 const appItems = [
@@ -35,7 +36,12 @@ export default function Home () {
   return (
       <div className="container">
         <JumboTron />
-        <Card appItems = {appItems}/>
+        <div className='features' style={{marginTop: '80px', marginBottom: '100px'}}>
+        <Features appItems = {appItems}/>
+        </div>
+        <div className='highlights' style={{marginTop: '80px', marginBottom: '100px'}}>
+        <Highlights />
+        </div>
       </div>
   )
 }
