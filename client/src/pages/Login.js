@@ -37,6 +37,7 @@ export default function Login () {
 
     function handleFormSubmit(e) {
         e.preventDefault()
+        window.location.assign("/profile")
         setEmail('')
         setPassword('')
     }

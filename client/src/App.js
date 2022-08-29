@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup'
 import Navigation from './components/Nav';
 import Footer from './components/Footer';
+import Profile from './pages/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const httpLink = createHttpLink({
@@ -45,7 +46,11 @@ function App() {
               />
               <Route 
                 path="/signup"
-                element={<Signup/>}
+                element={<Signup />}
+              />
+               <Route 
+                path="/profile"
+                element={<Profile />}
               />
             </Routes>
           <Footer />
