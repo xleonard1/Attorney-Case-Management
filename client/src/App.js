@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@a
 import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Signup from './pages/Signup'
 import Navigation from './components/Nav';
 import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -41,6 +42,10 @@ function App() {
               <Route 
                 path ="/login"
                 element={<Login />}
+              />
+              <Route 
+                path="/signup"
+                element={<Signup/>}
               />
             </Routes>
           <Footer />

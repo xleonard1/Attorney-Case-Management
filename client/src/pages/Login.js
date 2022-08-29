@@ -20,11 +20,39 @@ const styles = {
 
 
 export default function Login () {
+    
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    function handleInputChange (e) {
+       const { target } = e;
+       const inputType = target.name;
+       const inputValue = target.value;
+
+       if(inputType === "email") {
+           setEmail(inputValue)
+       } else {
+           setPassword(inputValue)
+       };
+    }
+
+    function handleFormSubmit(e) {
+        e.preventDefault()
+        setEmail('')
+        setPassword('')
+    }
+
+
+
     return (
         <Form style={styles.formStyle}>
           <Form.Group className="mb-3" controlId="formBasicEmail" style={styles.inputStyle}>
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control 
+               type="email" 
+               name="email"
+               placeholder="Enter email"
+               value={email}
+               onChange={handleInputChange} />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -32,9 +60,18 @@ export default function Login () {
     
           <Form.Group className="mb-3" controlId="formBasicPassword" style={styles.inputStyle}>
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control 
+                type="password" 
+                placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handleInputChange} />
           </Form.Group>
-          <Button variant="primary" type="submit" style={styles.inputStyle}>
+          <Button 
+             variant="primary" 
+             type="button" 
+             style={styles.inputStyle}
+             onClick={handleFormSubmit}>
             Submit
           </Button>
           <Form.Group>
