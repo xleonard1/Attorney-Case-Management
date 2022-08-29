@@ -9,6 +9,7 @@ import Navigation from './components/Nav';
 import Footer from './components/Footer';
 import Profile from './pages/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -32,6 +33,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client = {client}>
+     <ThemeProvider
+        breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+        minBreakpoint="xxs">
       <Router>
         <div>
             <Navigation />
@@ -56,8 +60,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-
-
+     </ThemeProvider>
     </ApolloProvider>
   );
 }
