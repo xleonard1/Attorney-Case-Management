@@ -20,14 +20,18 @@ const styles = {
 }
 
 export default function JumboTron() {
-    const [formState, setFormState] = useState({ email: '' });
+    const [email, setEmail] = useState('');
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormState({
-            ...formState,
-            [name]: value,
-        })
+    const handleChange = (e) => {
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+
+        if(inputType === "email") setEmail(inputValue)
+    }
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+        setEmail('')
     }
    return (
        <div
@@ -38,14 +42,14 @@ export default function JumboTron() {
         <div className = 'getmoreInfo' style={styles.getInfo} >  
            <input
               style={styles.input}
+              value={email}
               placeholder="youremail@test.com"
               name="email"
               type="email"
-              id="email"
               onChange={handleChange}
            />
            <div className="flex-row flex-end">
-             <Button variant="primary" style={styles.button}>Get More Information</Button>{' '}
+             <Button variant="primary" style={styles.button}  onClick={handleFormSubmit}>Get More Information</Button>{' '}
            </div>
         </div> 
        </div>
