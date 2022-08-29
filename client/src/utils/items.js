@@ -1,11 +1,10 @@
 import {BsFillFileEarmarkTextFill, BsFillPenFill, BsFillFilePersonFill, BsFillWalletFill, BsBookHalf } from "react-icons/bs";
-import Alert from 'react-bootstrap/Alert'
 
 const appItems = [
  {
    id: 1,
    name: "Client Intake Forms",
-   icon: <Alert.Link href='/intake'><BsFillFileEarmarkTextFill /></Alert.Link>
+   icon: <BsFillFileEarmarkTextFill />
  },
  {
    id: 2, 
@@ -20,7 +19,7 @@ const appItems = [
  {
    id: 4,
    name: "Client Portal",
-   icon: <Alert.Link href='/clientPortal' ><BsFillFilePersonFill /></Alert.Link>
+   icon: <BsFillFilePersonFill />
  },
  {
    id: 5,
